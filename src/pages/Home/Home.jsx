@@ -7,7 +7,6 @@ import FAQ from "./FAQ";
 
 function Home() {
     return <>
-    Hello
         <Navbar />
         <Landing />
         <Why />

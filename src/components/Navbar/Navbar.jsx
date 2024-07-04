@@ -6,7 +6,7 @@ function Navbar() {
      <>    
     <nav className='navbar flex justify-between py-6 px-9'>
         <div className='tensor_logo text-cyan-600   '>
-            <img src={tensor_logo} width={150}  alt="" />
+            <img src={tensor_logo} width={130}  alt="" />
         </div>
         <div >
             <ul className='nav_list flex  '>

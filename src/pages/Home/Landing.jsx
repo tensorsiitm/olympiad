@@ -9,140 +9,140 @@ import ellipse from '../../Images/ellipse.png'
 import ellipse_1 from '../../Images/Ellipse 1.png'
 import ellipse_2 from '../../Images/ellipse 2.png'
 import '../../components/Navbar/Navbar.css'
+import similing from '../../Images/similing_woman.png'
+import flat_university from '../../Images/flat-university-background 1.png'
 
 function Landing() {
     return (
         <>
-            <section className='first_section  '>
-                <div className="flex items-center">
-                    <div className="left bg-gradient-to-r from-indigo-400 ... w-[54px] h-[239px] mx-10"></div>
-                    <div className="center text-center  w-[503px] pr-[150px]">
-                        <div>"Preparing You for</div>
-                        <div>Olympaids and Competitive</div>
-                        <div>Exams Alike"</div>
+            <section className='first_section '>
+                <div className="flex items-center justify-around   ">
+                    <div className="left   p-4 ">
+                        <p>"Preparing You for Olympaids</p>
+                        <p>and Competitive Exams Alike"</p>
                     </div>
                     <div className="right ">
-                        <img src={ten_2} width={376} height={376} alt="Illustration" />
+                        <img src={similing} width={292} height={226} alt="Illustration" />
                     </div>
                 </div>
             </section>
-            {/* second section */}
-            <section className='second_section mb-6 '>
-                <div className="flex items-center flex-row-reverse  ">
-                    <div className="left bg-gradient-to-r from-white to-blue-400 ... w-[60px] h-[239px] mr-10 "></div>
-                    <div className="center text-center w-[454px] h-[102px] pl-[100px] pr-[30px] ">
-                        <div>"Your Talent Deserves the  </div>
-                        <div>Best Prizes"</div>
+            {/* second section 250 and 301 */}
+            <section className='second_section mb-14   '>
+                <div className="flex items-center justify-around   ">
+                    <div className="right  ">
+                        <img src={flat_university} width={272} height={226} alt="Illustration" />
                     </div>
-                    <div className="right w-1/3 ">
-                        <img src={ten_3} width={345} height={296} alt="Illustration" />
+                    <div className="left   p-4 ">
+                        <p>"Your Talent Deserves Nothing  </p>
+                        <p>But The Best"</p>
                     </div>
                 </div>
 
             </section>
             <section className='third_section mb-4 '>
-                <div className=' bg-[rgb(197,215,255)] py-[23px]  '>
-                    <div className='text-[rgb(64,83,255)]  font-bold'>ALL INDIA SCIENCE,MATHS AND APTITUDE OLYMPAIDS</div>
-                    <div className='text-[rgb(64,123,255)]'>FOR CLASS 6 TO 10</div>
+                <div className='  py-[23px] bg-gradient-to-b from-white from-40% to-[rgba(0,158,134,0.22)] to-55%  '>
+                    <div className='text-[rgb(37,161,142)]  font-bold'>ALL INDIA SCIENCE,MATHS AND APTITUDE OLYMPAIDS</div>
+                    <div className=' text-[rgb(37,161,142)]'>FOR CLASS 6 TO 10</div>
                 </div>
-                <div className=' box bg-[rgb(52,152,219)] grid grid-cols-5 divide-x py-2'>
+                <div className=' box bg-[rgb(0,127,108)] grid grid-cols-5 divide-x py-2'>
                     <div className=' box-1 flex items-center justify-center  '>
                         <div className='flex items-center '>
                             <div className=''>
-                            <img src={trust} alt="" className='w-8 h-8 mr-2'/> 
+                                <img src={trust} alt="" className='w-8 h-8 mr-2' />
 
                             </div>
-                                    <ul className='flex flex-col  text-white  items-center'>
+                            <ul className='flex flex-col  text-white  items-center'>
                                 <li className='text-[20px] font-bold mr-[58px]' >16+</li>
                                 <li className='text-[14px] mt-[-10px]'>Years of Trust</li>
-                                </ul>
+                            </ul>
                         </div>
                     </div>
                     <div className=' box-2 flex items-center justify-center  '>
                         <div className='flex items-center '>
                             <div className=''>
-                            <img src={school} alt="" className='w-8 h-8 mr-2'/> 
+                                <img src={school} alt="" className='w-8 h-8 mr-2' />
 
                             </div>
-                                    <ul className='flex flex-col  text-white  items-center'>
+                            <ul className='flex flex-col  text-white  items-center'>
                                 <li className='text-[20px] font-bold '>5000+</li>
                                 <li className='text-[14px] mt-[-10px] ml-[-6px]'>schools</li>
-                                </ul>
+                            </ul>
                         </div>
                     </div>
                     <div className=' box-3 flex items-center justify-center  '>
                         <div className='flex items-center '>
                             <div className=''>
-                            <img src={place} alt="" className='w-8 h-8 mr-2'/> 
+                                <img src={place} alt="" className='w-8 h-8 mr-2' />
 
                             </div>
-                                    <ul className='flex flex-col  text-white  items-center'>
+                            <ul className='flex flex-col  text-white  items-center'>
                                 <li className='text-[20px] font-bold'>16+</li>
                                 <li className='text-[14px] mt-[-10px]'>state</li>
-                                </ul>
+                            </ul>
                         </div>
                     </div>
                     <div className=' box-4 flex items-center justify-center  '>
                         <div className='flex items-center '>
                             <div className=''>
-                            <img src={pen} alt="" className='w-8 h-8  '/> 
+                                <img src={pen} alt="" className='w-8 h-8  ' />
 
                             </div>
-                                    <ul className='flex flex-col  text-white  items-center'>
+                            <ul className='flex flex-col  text-white  items-center'>
                                 <li className='text-[20px] font-bold'>500+</li>
                                 <li className='text-[14px]  mt-[-10px] '>Assessments</li>
-                                </ul>
+                            </ul>
                         </div>
                     </div>
                     <div className=' box-5 flex items-center justify-center  '>
                         <div className='flex items-center '>
                             <div className=''>
-                            <img src={users} alt="" className='w-8 h-8 mr-2'/> 
+                                <img src={users} alt="" className='w-8 h-8 mr-2' />
 
                             </div>
-                                    <ul className='flex flex-col  text-white  items-center'>
+                            <ul className='flex flex-col  text-white  items-center'>
                                 <li className='text-[20px] font-bold'>10,000+</li>
                                 <li className='text-[14px] ml-[-36px] mt-[-10px]'>users</li>
-                                </ul>
+                            </ul>
                         </div>
                     </div>
-                    </div>
-                   
+                </div>
+
             </section>
             <section className='four_section'>
                 <div>
                     <h2 className='text-center text-2xl'>Awards and Prizes</h2>
                 </div>
                 <div className='box_ flex py-2'>
-                    <div className='box-1  w-1/3 h-[230px] m-4 border-2 rounded-lg py-4'>
-                        <div className='flex  flex-col items-center'>
-                            <img src={ellipse_1} alt="" className='w-[40%] mb-2' />
-                            <div><h6 className='font-bold mb-3'>International Topper</h6></div>
+                <div className='box-1 w-1/3  m-4 border-2 rounded-lg '>
+                <div className='flex  flex-col items-center'>
+                            <img src={ellipse_2} alt="" className='w-[35%] ' />
+                            <h6 className='font-bold '>National Topper</h6>
                             <div>
-                                <p className='text-sm '>Trophy, medal, badge and</p>
-                                <p className='text-sm mt-[-4px]'>printed certificates</p>
-                                </div>
+                                <p className='text-xs px-3'>  A guided visit to the prestigious Indian </p>
+                                    <p className='text-xs '>Institute of Technology Madras, Gold Medal</p>
+                                    <p className='text-xs mb-1'> and National Topper Award Certificate.</p>
                             </div>
+                        </div>
                     </div>
-                    <div className='box-2  w-1/3 h-[230px] m-4 border-2 rounded-lg py-4'>
+                    <div className='box-2  w-1/3  m-4 border-2 rounded-lg '>
                         <div className='flex  flex-col items-center'>
-                            <img src={ellipse} alt=""  className='w-[40%] mb-2' />
-                            <div><h6 className='font-bold mb-3'>Zonal Topper</h6></div>
+                            <img src={ellipse} alt="" className='w-[35%] ' />
+                            <h6 className='font-bold '>State Topper</h6>
                             <div>
-                                <p className='text-sm '>Trophy, medal, badge and</p>
-                                <p className='text-sm mt-[-4px]'>printed certificates</p>
-                                </div>
+                                <p className='text-xs px-3 '>State Topper Award certificate </p>
+                                <p className='text-xs '>and Gold Medal</p>
                             </div>
+                        </div>
                     </div>
-                    <div className='box-3  w-1/3 h-[230px] m-4 border-2 rounded-lg py-4'>
+                    <div className='box-3  w-1/3  m-4 border-2 rounded-lg '>
                         <div className='flex  flex-col items-center'>
-                            <img src={ellipse_2} alt="" className='w-[40%] mb-2' />
-                            <div><h6 className='font-bold mb-3'>High Scorers (90% & above)</h6></div>
+                            <img src={ellipse_1} alt="" className='w-[35%] ' />
+                            <h6 className='font-bold  '>High Scorers</h6>
                             <div>
-                                <p className='text-sm '>Gold medal, badge and</p>
-                                <p className='text-sm mt-[-4px]'>printed certificates</p>
-                                </div>
+                                <p className='text-xs px-3'>Students making it to top 10% gets best </p>
+                                <p className='text-xs '>performer Certificate</p>
                             </div>
+                        </div>
                     </div>
                 </div>
 

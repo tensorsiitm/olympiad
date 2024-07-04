@@ -1,4 +1,4 @@
-/* Import Google font - Poppins */
+/* Import Google font - Poppins  */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 * {
   margin: 0;
@@ -34,7 +34,7 @@ body {
 }
 .review {
   font-size: 1rem;
-  padding-bottom: 60px; /* Add padding to avoid overlap with name and college */
+  padding-bottom: 60px; 
 }
 .student-name,
 .student-college {
@@ -57,11 +57,23 @@ body {
 .swiper-button-next,
 .swiper-button-prev {
   color: #fff;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.swiper-button-next {
+  right: -20;
+}
+
+.swiper-button-prev {
+  left: -20;
 }
 
 @media screen and (max-width: 900px) {
   .wrapper .swiper-slide {
-    width: calc((100% / 2) - 9px);
+    width: calc((100% / 2) - 10px);
   }
 }
 

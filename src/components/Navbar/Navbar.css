@@ -1,0 +1,33 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&display=swap');
+
+
+
+.nav_list li a {
+    padding: 23px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+}
+
+/* home landing page css */
+
+.first_section .center {
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 26.88px;
+}
+.second_section .center{
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 25.47px;
+}
+.third_section{
+    font-family: "Amiko", sans-serif;
+    font-size: 26px;
+}
+.four_section h2 , .four_section .box_ .box-1{
+    font-family: "Raleway", sans-serif;
+
+}

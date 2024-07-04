@@ -67,7 +67,7 @@ h1 {
     margin-top: 0;
 }
 
-/* Responsive Styles for Mobile */
+
 @media (max-width: 768px) {
     .faq-content {
         width: 100%;
@@ -81,6 +81,7 @@ h1 {
     .FAQHead {
         font-size: 48px;
         text-align: center;
+        margin-bottom: 60px;
     }
 
     .faq-box {
@@ -90,5 +91,9 @@ h1 {
 
     .faq-image {
         display: none;
+    }
+    .faq-container{
+        display: flex;
+        flex-direction: column;
     }
 }

@@ -1,11 +1,13 @@
 /* Import Google font - Poppins  */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
 body {
   display: flex;
   padding: 0 35px;
@@ -13,63 +15,74 @@ body {
   justify-content: center;
   min-height: 100vh;
 }
+
 .wrapper {
   max-width: 1100px;
   width: 100%;
   position: relative;
 }
+
 .wrapper .swiper-container {
   width: 100%;
 }
+
 .wrapper .swiper-slide {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 200px;
-  background: #3498DB;
+  background: #0FA487; /* Green color */
   padding: 20px;
   border-radius: 16px;
   color: white;
   position: relative;
 }
-.review {
-  font-size: 1rem;
-  padding-bottom: 60px; 
-}
-.student-name,
-.student-college {
-  text-align: right;
-  position: absolute;
-  right: 20px;
-}
-.student-name {
-  bottom: 40px;
-  font-size: 1rem;
-  font-weight: bold;
-}
-.student-college {
-  bottom: 20px;
-  font-size: 0.9rem;
-  color: #ddd;
-}
 
-/* Swiper buttons */
+.review {
+    font-size: 0.75rem;
+    padding-bottom: 40px; /* Increased padding for better spacing */
+  }
+  
+  .student-name,
+  .student-college {
+    text-align: right;
+    position: absolute;
+    right: 20px;
+  }
+  
+  .student-name {
+    bottom: 30px; /* Adjusted bottom position */
+    font-size: 0.75rem;
+    font-weight: bold;
+  }
+  
+  .student-college {
+    bottom: 10px; /* Adjusted bottom position */
+    font-size: 0.9rem;
+    color: #ddd;
+  }
 .swiper-button-next,
 .swiper-button-prev {
-  color: #fff;
-  position: relative;
+  color: #0FA487;
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
 
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 5px; /* Adjust button size if needed */
+}
 
+/* Adjust button positions */
 .swiper-button-next {
-  right: -20;
+  right: -10px; /* Adjusted position */
 }
 
 .swiper-button-prev {
-  left: -20;
+  left: -10px; /* Adjusted position */
 }
+
 
 @media screen and (max-width: 900px) {
   .wrapper .swiper-slide {

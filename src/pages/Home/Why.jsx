@@ -9,7 +9,7 @@ import "./why.css"
 function Why() {
     //js code 
     return <>
-    <div class="container">
+    {/* <div class="container">
         <h1>Why Participate?</h1>
         <div class="ellipse-container">
             <div class="ellipse" id="left-ellipse">
@@ -23,7 +23,7 @@ function Why() {
                 <p>Inclusivity<br>We welcome students from all boards including CBSE, ICSE, State Boards, IB, IGCSE, and ISC.</p>
             </div>
         </div>
-    </div>
+    </div> */}
     </>;
 }
 

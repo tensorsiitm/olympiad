@@ -13,16 +13,12 @@
 
 /* home landing page css */
 
-.first_section .center {
+.first_section .left,.second_section .left {
     font-family: "Raleway", sans-serif;
     font-weight: 600;
-    font-size: 26.88px;
+    font-size: 29.88px;
 }
-.second_section .center{
-    font-family: "Raleway", sans-serif;
-    font-weight: 600;
-    font-size: 25.47px;
-}
+
 .third_section{
     font-family: "Amiko", sans-serif;
     font-size: 26px;

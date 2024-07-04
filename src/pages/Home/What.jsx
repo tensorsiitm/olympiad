@@ -33,6 +33,9 @@ function What() {
 
     return (
         <div className="wrapper">
+            <h2 className="carousel-title">
+                <span className="title-highlight">What</span> people think about us
+            </h2>
             <div className="swiper card_slider">
                 <div className="swiper-wrapper">
                     <div className="swiper-slide card">

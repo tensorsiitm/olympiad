@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
+.footer {
+    margin-top: 250px;
+    display: flex;
+    flex-direction: column;
+    background-color: #26A18D;
+    padding: 20px;
+    align-items: center;
+    color: white;
+}
+
+.footer .copyright {
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.logoimg {
+    width: 154px;
+    height: 40px;
+    margin: 5px 0;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    margin-right: 15px;
+    width: 35px;
+    height: 35px;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+}
+
+.icontext {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 10px;
+}
+.icontextone{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.icontextthree{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    margin: 0;
+}
+
+.icons {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: white;
+}
+
+
+@media (max-width: 768px) {
+    .contact {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icontext {
+        margin: 10px 0;
+    }
+
+    .logo-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        margin: 10px 0;
+    }
+
+    .line {
+        width: 80%;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .social-icons a {
+        margin-right: 10px;
+    }
+}

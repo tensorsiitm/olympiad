@@ -45,7 +45,7 @@ const FAQ = () => {
         <div className="faq-image">
           <img src="FAQ.png" alt="FAQ" />
         </div>
-        <div className="faq-content">
+        <div id='faq-content' className="faq-content">
           {faqs.map((faq, index) => (
             <div key={index} className={`faq-item ${activeIndex === index ? 'active' : ''}`}>
               <div className="faq-question" onClick={() => toggleFAQ(index)}>

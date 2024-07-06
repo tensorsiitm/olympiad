@@ -52,8 +52,8 @@ function Landing() {
 
                             </div>
                             <ul className='flex flex-col  text-white  items-center'>
-                                <li className='text-[20px] font-bold mr-[58px]' >16+</li>
-                                <li className='text-[14px] mt-[-10px]'>Years of Trust</li>
+                                <li className='text-[23px] font-bold mr-[58px]' >16+</li>
+                                <li className='text-[17px] mt-[-10px]'>Years of Trust</li>
                             </ul>
                         </div>
                     </div>
@@ -64,8 +64,8 @@ function Landing() {
 
                             </div>
                             <ul className='flex flex-col  text-white  items-center'>
-                                <li className='text-[20px] font-bold '>5000+</li>
-                                <li className='text-[14px] mt-[-10px] ml-[-6px]'>schools</li>
+                                <li className='text-[23px] font-bold '>5000+</li>
+                                <li className='text-[17px] mt-[-10px] ml-[-6px]'>schools</li>
                             </ul>
                         </div>
                     </div>
@@ -76,8 +76,8 @@ function Landing() {
 
                             </div>
                             <ul className='flex flex-col  text-white  items-center'>
-                                <li className='text-[20px] font-bold'>16+</li>
-                                <li className='text-[14px] mt-[-10px]'>state</li>
+                                <li className='text-[23px] font-bold'>16+</li>
+                                <li className='text-[17px] mt-[-10px]'>state</li>
                             </ul>
                         </div>
                     </div>
@@ -88,8 +88,8 @@ function Landing() {
 
                             </div>
                             <ul className='flex flex-col  text-white  items-center'>
-                                <li className='text-[20px] font-bold'>500+</li>
-                                <li className='text-[14px]  mt-[-10px] '>Assessments</li>
+                                <li className='text-[23px] font-bold'>500+</li>
+                                <li className='text-[17px]  mt-[-10px] '>Assessments</li>
                             </ul>
                         </div>
                     </div>
@@ -100,8 +100,8 @@ function Landing() {
 
                             </div>
                             <ul className='flex flex-col  text-white  items-center'>
-                                <li className='text-[20px] font-bold'>10,000+</li>
-                                <li className='text-[14px] ml-[-36px] mt-[-10px]'>users</li>
+                                <li className='text-[23px] font-bold'>10,000+</li>
+                                <li className='text-[17px] ml-[-36px] mt-[-10px]'>users</li>
                             </ul>
                         </div>
                     </div>

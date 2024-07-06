@@ -25,10 +25,10 @@ function Footer() {
 
     
         <div class="social-icons">
-            <a href="#"><BsFacebook className='icon'/></a>
-            <a href="#"><FaInstagramSquare className='icon'/></a>
-            <a href="#"><IoLogoLinkedin className='icon'/></a>
-            <a href="#"><FaYoutube className='icon'/></a>
+            <a href="https://www.facebook.com/tensorsofficial/"><BsFacebook className='icon'/></a>
+            <a href="https://www.instagram.com/tensors_official/reels/"><FaInstagramSquare className='icon'/></a>
+            <a href="https://in.linkedin.com/company/tensors"><IoLogoLinkedin className='icon'/></a>
+            <a href="https://www.youtube.com/channel/UCYQ-dJn04bDDjs1t6eUzq7A"><FaYoutube className='icon'/></a>
         </div>
         
         <div class="copyright">

@@ -1,5 +1,5 @@
-import ten_2 from '../../Images/ten_2.png'
-import ten_3 from '../../Images/ten_3.png'
+// import ten_2 from '../../Images/ten_2.png'
+// import ten_3 from '../../Images/ten_3.png'
 import trust from '../../Images/Trust.png'
 import school from '../../Images/ten_school.png'
 import place from '../../Images/Place Marker.png'

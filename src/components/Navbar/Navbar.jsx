@@ -1,5 +1,5 @@
 import './Navbar.css'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import tensor_logo from '../../Images/tensor_logo.png'
 function Navbar() {
     return(

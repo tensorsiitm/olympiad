@@ -11,11 +11,11 @@ function Navbar() {
         <div >
             <ul className='nav_list flex  '>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="/">School Outreach</a></li>
+                <li><a href="https://tensors.in/" target="_blank">About Us</a></li>
+                <li><a href="https://forms.gle/YA5meWcDAdsAyqkd9" target="_blank">School Outreach</a></li>
                 <li><a href="#faq-content">FAQ</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="/">Register</a></li>
+                <li><a href="https://rzp.io/l/nSJIjoTty" target="_blank">Register</a></li>
             </ul>
         </div>
     </nav>

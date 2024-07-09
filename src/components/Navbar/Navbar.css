@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&display=swap');
@@ -11,19 +10,194 @@
     font-weight: 600;
 }
 
+.bar {
+    width: 20px;
+    height: 1.5px;
+    background-color: gray;
+    margin: 3px 0;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index:1100;
+}
+
+.menu-icon.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .menu-icon.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-icon.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+
+
 /* home landing page css */
 
-.first_section .left,.second_section .left {
+.first_section .left,
+.second_section .left {
     font-family: "Raleway", sans-serif;
     font-weight: 600;
     font-size: 29.88px;
 }
 
-.third_section{
+.third_section  .info {
     font-family: "Amiko", sans-serif;
     font-size: 26px;
 }
-.four_section h2 , .four_section .box_ .box-1{
+
+.four_section h2,
+.four_section .box_ .box-1 {
     font-family: "Raleway", sans-serif;
 
+}
+
+
+  
+
+
+
+/* nav bar hamberger icon */
+@media screen and (max-width:892px) {
+    .menu-icon {
+        display: flex;
+    }
+
+    .nav_list_container {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 80%;
+        /* Adjust width as needed */
+        max-width: 200px;
+        /* Limit maximum width */
+        height: 100vh;
+        background-color: white;
+        /* justify-content: center; */
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+        /*Ensure it appears above other content*/
+    }
+
+    .nav_list_container.open {
+        display: flex;
+        transform: translateX(0);
+    }
+
+    .nav_list {
+        margin: 23px 0px;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav_list li a {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width:575.98px) {
+    .first_section  .left,.second_section .left{
+        font-size: 18.88px;
+    }
+    .first_section img{
+        width: 192px;
+    }
+    .second_section img{
+        width: 172px;
+    }
+    .second_section {
+        margin-bottom:.5rem;
+    }
+    .third_section .info{
+        font-size: 15px;
+    }
+    .third_section .item-1{
+        font-size: 15px;
+    }
+    .third_section img {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .third_section .item-2{
+        font-size: 10px;
+        margin-top: -8px;
+    }
+    .third_section .box-1 .item-1{
+        margin-right:44px ;
+    }
+    .four_section .box_{
+        flex-direction: column;
+    }
+    .four_section h2{
+        font-size: 1.0rem;
+    }
+    .four_section h6{
+        font-size: 0.8rem;
+    }
+    .four_section p {
+        font-size: 10px;
+    }
+    .four_section .box-1,.four_section .box-2,.four_section .box-3 {
+        width: 50%;
+        margin:12px auto;
+    }
+}
+
+@media screen  and (min-width:576px) and (max-width:720px){
+    .first_section .left,.second_section .left {
+        font-size:19.88px ;
+    } 
+    .first_section img{
+        width: 182px;
+    }
+    .second_section img{
+        width: 152px;
+    }   
+    .second_section {
+        margin-bottom:.5rem;
+    }
+    .third_section .info{
+        font-size: 18px;
+    }
+    .third_section .item-1{
+        font-size: 15px;
+    }
+    .third_section img {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .third_section .item-2{
+        font-size: 10px;
+        margin-top: -8px;
+    }
+    .third_section .box-1 .item-1{
+        margin-right:44px ;
+    }
+    .four_section .box_{
+        flex-direction: column;
+    }
+    .four_section h2{
+        font-size: 1.2rem;
+    }
+    .four_section h6{
+        font-size: 1.0rem;
+    }
+    .four_section p {
+        font-size: 14px;
+    }
+    .four_section .box-1,.four_section .box-2,.four_section .box-3 {
+        width: 60%;
+        margin:12px auto;
+    }
+    
 }

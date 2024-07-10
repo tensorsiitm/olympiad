@@ -1,14 +1,29 @@
 import './Navbar.css'
 // import { Link } from 'react-router-dom';
 import tensor_logo from '../../Images/tensor_logo.png'
+import { useState } from 'react';
 function Navbar() {
+    const[isOpen,setisOpen]=useState(false)
+    const togglemenu=()=>{
+        setisOpen(!isOpen)
+    }
+    const closeMenu = () => {
+        setisOpen(false);
+      };
+    
     return(
      <>    
     <nav className='navbar flex justify-between py-6 px-9'>
         <div className='tensor_logo text-cyan-600   '>
             <img src={tensor_logo} width={130}  alt="" />
         </div>
-        <div >
+        <div className={`menu-icon ${isOpen ? 'open' : ''}`} onClick={togglemenu}>
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
+            </div>
+            <div className={`nav_list_container ${isOpen ? 'open' : ''}`}>
+
             <ul className='nav_list flex  '>
                 <li><a href="#home">Home</a></li>
                 <li><a href="https://tensors.in/" target="_blank" rel="noreferrer">About Us</a></li>

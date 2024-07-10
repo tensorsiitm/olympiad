@@ -7,9 +7,9 @@ function Navbar() {
     const togglemenu=()=>{
         setisOpen(!isOpen)
     }
-    const closeMenu = () => {
-        setisOpen(false);
-      };
+    // const closeMenu = () => {
+    //     setisOpen(false);
+    //   };
     
     return(
      <>    

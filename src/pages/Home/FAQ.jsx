@@ -24,7 +24,7 @@ const FAQ = () => {
     },
     {
       question: 'How can students register for the Olympiad?',
-      answer: 'Online Mode: Direct registration by students using the provided link. Parents/students can register and pay online directly. Schools can view registered students data anytime on the portal. [Add link to Register] Traditional Mode: Schools collect fees from students, fill in the details in the attached Excel sheet, and email it to us. Schools can share the attached circular for this mode.',
+      answer: 'Online Mode: Direct registration by students using the provided link. Parents/students can register and pay online directly. Schools can view registered students data anytime on the portal.\nTraditional Mode: Schools collect fees from students, fill in the details in the attached Excel sheet, and email it to us. Schools can share the attached circular for this mode.',
     },
     {
       question: 'When will the results be announced?',
@@ -51,7 +51,9 @@ const FAQ = () => {
               <div className="faq-question" onClick={() => toggleFAQ(index)}>
                 {faq.question} <span className="arrow">{activeIndex === index ? <IoIosArrowUp /> : <IoIosArrowDown />}</span>
               </div>
-              <div className="faq-answer">{faq.answer}</div>
+              {faq.answer.split('\n').map(line => {
+                return <div className="faq-answer">{line}</div>
+              })}
             </div>
           ))}
         </div>

@@ -42,7 +42,7 @@ function Landing() {
             <section className='third_section mb-4 '>
                 <div className=' info  py-[23px] bg-gradient-to-b from-white from-40% to-[rgba(0,158,134,0.22)] to-55%  '>
                     <div className='text-[rgb(37,161,142)]  font-bold'>ALL INDIA SCIENCE,MATHS AND APTITUDE OLYMPAIDS</div>
-                    <div className=' text-[rgb(37,161,142)]'>FOR CLASS 6 TO 10</div>
+                    <div className=' text-[rgb(37,161,142)]'>FOR CLASS 5 TO 10</div>
                 </div>
                 <div className=' box bg-[rgb(0,127,108)] grid grid-cols-5 divide-x py-2'>
                     <div className=' box-1 flex items-center justify-center  '>

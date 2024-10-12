@@ -118,7 +118,7 @@ function Landing() {
                             <img src={cash_image} alt="" className='w-[35%] ' />
                             <h6 className='font-bold '>Cash Prizes</h6>
                             <div>
-                                <p className='text-xs px-3 '>To be Discussed</p>
+                                <p className='text-xs px-3 '>To be decided</p>
                                     {/* <p className='text-xs '>In each grade</p> */}
                             </div>
                         </div>

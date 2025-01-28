@@ -12,6 +12,7 @@ import flat_university from '../../Images/flat-university-background 1.png'
 import image_3 from '../../Images/image 3.png'
 import image_4 from '../../Images/image 4.png'
 
+
 function Landing() {
     return (
         <>
@@ -26,7 +27,6 @@ function Landing() {
                     </div>
                 </div>
             </section>
-            {/* second section 250 and 301 */}
             <section className='second_section mb-14   '>
                 <div className="flex items-center justify-around   ">
                     <div className="right  ">
@@ -145,8 +145,47 @@ function Landing() {
                         </div>
                     </div>
                 </div>
-
+       
             </section>
+
+            <section className="py-[5vh] flex flex-col justify-center items-center">
+  <h1 className="md:text-7xl text-3xl text-[#2bae8e] font-semibold">
+    HOW TO PREPARE?
+  </h1>
+
+  <div className="md:w-[80vw] w-[95vw] overflow-x-auto scrollbar-hidden md:px-[1vw] px-[4vw] pt-[3vh] pb-[5vh] bg-[#2bae8e] rounded-3xl flex gap-[5vw] md:justify-center justify-start items-center">
+    <div className="flex-shrink-0">
+      <video
+        width="100%"
+        controls
+        className="md:w-[22vw] w-[80vw] rounded-3xl"
+      >
+        <source src="Nidhi.mov" type="video/mp4" />
+      </video>
+    </div>
+
+    <div className="flex-shrink-0">
+      <video
+        width="100%"
+        controls
+        className="md:w-[22vw] w-[80vw] rounded-3xl"
+      >
+        <source src="Lino.mov" type="video/mp4" />
+      </video>
+    </div>
+
+    <div className="flex-shrink-0">
+      <video
+        width="100%"
+        controls
+        className="md:w-[22vw] w-[80vw] rounded-3xl"
+      >
+        <source src="Devika.mov" type="video/mp4" />
+      </video>
+    </div>
+  </div>
+</section>
+
         </>
     );
 }

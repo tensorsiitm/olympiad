@@ -2,6 +2,7 @@ import './Navbar.css'
 // import { Link } from 'react-router-dom';
 import tensor_logo from '../../Images/tensor_logo.png'
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 function Navbar() {
     const[isOpen,setisOpen]=useState(false)
     const togglemenu=()=>{
@@ -10,6 +11,17 @@ function Navbar() {
     // const closeMenu = () => {
     //     setisOpen(false);
     //   };
+
+
+
+
+    const navigate=useNavigate()
+       
+    const viewResult = () => {
+        navigate('/results');
+    }
+    
+    
     
     return(
      <>    
@@ -30,7 +42,9 @@ function Navbar() {
                 <li><a href="https://forms.gle/YA5meWcDAdsAyqkd9" target="_blank" rel="noreferrer">School Outreach</a></li>
                 <li><a href="#faq-content">FAQ</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li onClick={viewResult}><a  target="_blank" >Results</a></li>
                 <li><a href="https://rzp.io/l/nSJIjoTty" target="_blank" rel="noreferrer">Register</a></li>
+
             </ul>
         </div>
     </nav>

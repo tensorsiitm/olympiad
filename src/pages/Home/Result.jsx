@@ -101,40 +101,49 @@ const StudentSearch = () => {
 
         {/* Display Result */}
         {selectedStudent ? (
-          <div className="mt-6 p-4 border border-green-300 rounded-lg shadow-md bg-green-50">
-          <h3 className="text-xl font-semibold text-green-800">
-  {selectedStudent["Name of Student"]?.toUpperCase()}
-</h3>
+  <div className="mt-6 p-4 border border-green-300 rounded-lg shadow-md bg-green-50">
+    <h3 className="text-xl font-semibold text-green-800">
+      {selectedStudent["Name of Student"]?.toUpperCase()}
+    </h3>
 
-            <p className="text-green-700">
-              <strong>Student ID:</strong> {selectedStudent["Student ID"]}
-            </p>
-            <p className="text-green-700">
-              <strong>Class:</strong> {selectedStudent["Class"]}
-            </p>
-            <p className="text-green-700">
-              <strong>MODE OF EXAMINATION:</strong> {selectedStudent["Mode"]}
-            </p>
-            <p className="text-green-700">
-              <strong>Mark:</strong> {selectedStudent["Mark"]}
-            </p>
-            <p className="text-green-700">
-              <strong>OVERALL RANK:</strong> {selectedStudent["RANK"]}
-            </p>
+    <p className="text-green-700">
+      <strong>Student ID:</strong> {selectedStudent["Student ID"]}
+    </p>
+    <p className="text-green-700">
+      <strong>Class:</strong> {selectedStudent["Class"]}
+    </p>
+    <p className="text-green-700">
+      <strong>MODE OF EXAMINATION:</strong> {selectedStudent["Mode"]}
+    </p>
+    <p className="text-green-700">
+      <strong>Mark:</strong> {selectedStudent["Mark"]}
+    </p>
+    <p className="text-green-700">
+      <strong>OVERALL RANK:</strong> {selectedStudent["RANK"]}
+    </p>
 
-            {/* Success Message */}
-            <div className="mt-4 p-3 bg-green-200 text-green-800 font-semibold text-center rounded-lg shadow-md">
-              🎉 Congratulations! You have secured a qualifying mark in this examination. 🎉
-            </div>
-          </div>
-        ) : (
-          studentID &&
-          !loading && (
-            <p className="text-red-500 text-center mt-3">
-              Student not found. Please check the Student ID.
-            </p>
-          )
-        )}
+    {/* Default Success Message */}
+    <div className="mt-4 p-3 bg-green-200 text-green-800 font-semibold text-center rounded-lg shadow-md">
+      🎉 Congratulations! You have secured a qualifying mark in this examination. 🎉
+    </div>
+
+    {/* Special Message for Top 3 Ranks */}
+    {["1", "2", "3"].includes(selectedStudent["RANK"]) && (
+      <div className="mt-4 p-3 bg-yellow-200 text-yellow-900 font-bold text-center rounded-lg shadow-md">
+        🏆 Exceptional Performance! You ranked {selectedStudent["RANK"]}.  
+        You did an excellent job! Keep up the great work! 🚀
+      </div>
+    )}
+  </div>
+) : (
+  studentID &&
+  !loading && (
+    <p className="text-red-500 text-center mt-3">
+      Student not found. Please check the Student ID.
+    </p>
+  )
+)}
+
       </div>
     </div>
   );

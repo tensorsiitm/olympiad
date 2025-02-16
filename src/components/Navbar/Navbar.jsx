@@ -42,7 +42,7 @@ function Navbar() {
                 <li><a href="https://forms.gle/YA5meWcDAdsAyqkd9" target="_blank" rel="noreferrer">School Outreach</a></li>
                 <li><a href="#faq-content">FAQ</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li onClick={viewResult}><a  target="_blank" >Results</a></li>
+                <li onClick={viewResult}>Results</li>
                 <li><a href="https://rzp.io/l/nSJIjoTty" target="_blank" rel="noreferrer">Register</a></li>
 
             </ul>

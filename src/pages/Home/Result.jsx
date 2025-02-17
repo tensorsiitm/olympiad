@@ -62,7 +62,7 @@ const StudentSearch = () => {
 
         {/* Input Fields */}
         <div className="mt-4 space-y-4">
-          <input
+          {/* <input
             type="text"
             placeholder="Enter Name"
             value={name}
@@ -75,7 +75,7 @@ const StudentSearch = () => {
             value={studentClass}
             onChange={(e) => setStudentClass(e.target.value)}
             className="w-full p-3 border border-green-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-          />
+          /> */}
           <input
             type="text"
             placeholder="Enter Student ID"

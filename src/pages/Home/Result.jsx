@@ -62,20 +62,7 @@ const StudentSearch = () => {
 
         {/* Input Fields */}
         <div className="mt-4 space-y-4">
-          {/* <input
-            type="text"
-            placeholder="Enter Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className="w-full p-3 border border-green-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-          />
-          <input
-            type="text"
-            placeholder="Enter Class"
-            value={studentClass}
-            onChange={(e) => setStudentClass(e.target.value)}
-            className="w-full p-3 border border-green-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
-          /> */}
+         
           <input
             type="text"
             placeholder="Enter Student ID"
@@ -122,29 +109,34 @@ const StudentSearch = () => {
       <strong>OVERALL RANK:</strong> {selectedStudent["RANK"]}
     </p>
 
-    {selectedStudent["RANK"] !== "0" && (
-  <div className="mt-4 p-3 bg-green-200 text-green-800 font-semibold text-center rounded-lg shadow-md">
-    🎉 Congratulations! You have secured a qualifying mark in this examination. 🎉
-  </div>
-)}
+    {/* Check if mark is less than 50 */}
+    {parseInt(selectedStudent["Mark"]) < 50 && (
+      <div className="mt-4 p-3 bg-red-200 text-red-800 font-semibold text-center rounded-lg shadow-md">
+        ❌ You are not qualified. The pass mark is 50. Better luck next time! 🍀
+      </div>
+    )}
 
+    {/* Check if the student has a non-zero rank */}
+    {selectedStudent["RANK"] !== "0" && parseInt(selectedStudent["Mark"]) >= 50 && (
+      <div className="mt-4 p-3 bg-green-200 text-green-800 font-semibold text-center rounded-lg shadow-md">
+        🎉 Congratulations! You have secured a qualifying mark in this examination. 🎉
+      </div>
+    )}
 
-{["1", "2", "3"].includes(selectedStudent["RANK"]) && (
-  <div className="mt-4 p-3 bg-yellow-200 text-yellow-900 font-bold text-center rounded-lg shadow-md">
-    🏆 Exceptional Performance! You ranked {selectedStudent["RANK"]}.  
-    You did an excellent job! Keep up the great work! 🚀
-  </div>
-)}
+    {/* Exceptional rank for 1st, 2nd, and 3rd place */}
+    {["1", "2", "3"].includes(selectedStudent["RANK"]) && parseInt(selectedStudent["Mark"]) >= 50 && (
+      <div className="mt-4 p-3 bg-yellow-200 text-yellow-900 font-bold text-center rounded-lg shadow-md">
+        🏆 Exceptional Performance! You ranked {selectedStudent["RANK"]}.  
+        You did an excellent job! Keep up the great work! 🚀
+      </div>
+    )}
 
-{selectedStudent["RANK"] === "0" && (
-  <div className="mt-4 p-3 bg-yellow-200 text-yellow-900 font-bold text-center rounded-lg shadow-md">
-    Oops!! Sorry, you are absent!!
-  </div>
-)}
-
-
-
-
+    {/* Rank 0 means absent */}
+    {selectedStudent["RANK"] === "0" && (
+      <div className="mt-4 p-3 bg-yellow-200 text-yellow-900 font-bold text-center rounded-lg shadow-md">
+        Oops!! Sorry, you are absent!!
+      </div>
+    )}
   </div>
 ) : (
   studentID &&
@@ -154,6 +146,7 @@ const StudentSearch = () => {
     </p>
   )
 )}
+
 
 
 {/* { ["0"].includes(selectedStudent["RANK"]) && (

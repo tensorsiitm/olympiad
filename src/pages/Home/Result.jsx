@@ -86,7 +86,7 @@ const StudentSearch = () => {
         </div>
 
         {/* Error Message */}
-        {/* {error && <p className="text-red-500 text-center mt-2">{error}</p>} */}
+        {error && <p className="text-red-500 text-center mt-2">{error}</p>}
 
         {/* Search Button */}
         <button

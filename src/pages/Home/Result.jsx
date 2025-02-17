@@ -3,8 +3,8 @@ import React, { useState, useEffect } from "react";
 const StudentSearch = () => {
   const [students, setStudents] = useState([]);
   const [studentID, setStudentID] = useState("");
-  const [name, setName] = useState("");
-  const [studentClass, setStudentClass] = useState("");
+  // const [name, setName] = useState("");
+  // const [studentClass, setStudentClass] = useState("");
   const [selectedStudent, setSelectedStudent] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -36,8 +36,8 @@ const StudentSearch = () => {
   }, []);
 
   const handleSearch = () => {
-    if (!name || !studentClass || !studentID) {
-      setError("All fields are required.");
+    if ( !studentID) {
+      setError("Student ID is required.");
       return;
     }
     setError("");
@@ -86,7 +86,7 @@ const StudentSearch = () => {
         </div>
 
         {/* Error Message */}
-        {error && <p className="text-red-500 text-center mt-2">{error}</p>}
+        {/* {error && <p className="text-red-500 text-center mt-2">{error}</p>} */}
 
         {/* Search Button */}
         <button
@@ -122,16 +122,43 @@ const StudentSearch = () => {
       <strong>OVERALL RANK:</strong> {selectedStudent["RANK"]}
     </p>
 
-    {/* Default Success Message */}
-    <div className="mt-4 p-3 bg-green-200 text-green-800 font-semibold text-center rounded-lg shadow-md">
-      🎉 Congratulations! You have secured a qualifying mark in this examination. 🎉
-    </div>
+    {selectedStudent["RANK"] !== "0" && (
+  <div className="mt-4 p-3 bg-green-200 text-green-800 font-semibold text-center rounded-lg shadow-md">
+    🎉 Congratulations! You have secured a qualifying mark in this examination. 🎉
+  </div>
+)}
 
-    {/* Special Message for Top 3 Ranks */}
-    {["1", "2", "3"].includes(selectedStudent["RANK"]) && (
+
+{["1", "2", "3"].includes(selectedStudent["RANK"]) && (
+  <div className="mt-4 p-3 bg-yellow-200 text-yellow-900 font-bold text-center rounded-lg shadow-md">
+    🏆 Exceptional Performance! You ranked {selectedStudent["RANK"]}.  
+    You did an excellent job! Keep up the great work! 🚀
+  </div>
+)}
+
+{selectedStudent["RANK"] === "0" && (
+  <div className="mt-4 p-3 bg-yellow-200 text-yellow-900 font-bold text-center rounded-lg shadow-md">
+    Oops!! Sorry, you are absent!!
+  </div>
+)}
+
+
+
+
+  </div>
+) : (
+  studentID &&
+  !loading && (
+    <p className="text-red-500 text-center mt-3">
+      Student not found. Please check the Student ID.
+    </p>
+  )
+)}
+
+
+{/* { ["0"].includes(selectedStudent["RANK"]) && (
       <div className="mt-4 p-3 bg-yellow-200 text-yellow-900 font-bold text-center rounded-lg shadow-md">
-        🏆 Exceptional Performance! You ranked {selectedStudent["RANK"]}.  
-        You did an excellent job! Keep up the great work! 🚀
+        Oops.!!Sorry You are absent !!
       </div>
     )}
   </div>
@@ -142,7 +169,8 @@ const StudentSearch = () => {
       Student not found. Please check the Student ID.
     </p>
   )
-)}
+)} */}
+
 
       </div>
     </div>

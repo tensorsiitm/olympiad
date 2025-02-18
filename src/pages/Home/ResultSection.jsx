@@ -21,7 +21,7 @@ const students = [
     class: "8th",
     topStudents: [
       { rank: 1, name: "Haeda Fathima", marks: 281, school: "Mode:Online", photo: "haedha.jpg" },
-      { rank: 2, name: "AK.Harishree ", marks: 270, school: "St. Thomas Residential School", photo: "rank2.jpg" },
+      { rank: 2, name: "K.Harishree ", marks: 270, school: "St. Thomas Residential School", photo: "rank2.jpg" },
       { rank: 3, name: "Abhinav Suresh Kumar", marks: 269, school: "Mode:Online", photo: "abhinav.jpg" },
     ],
   },

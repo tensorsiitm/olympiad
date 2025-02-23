@@ -14,7 +14,7 @@ const students = [
     topStudents: [
       { rank: 1, name: "Goutham Sankar", marks: 285, school: "M.T.M Senior Secondary", photo: "gautham.jpg" },
       { rank: 2, name: "Sarang S", marks: 274, school: "St. Thomas Residential School", photo: "saarang.jpg" },
-      { rank: 3, name: "A Advika", marks: 272, school: "St. Thomas Residential School", photo: "advika.png" },
+      { rank: 3, name: "S Advika", marks: 272, school: "St. Thomas Residential School", photo: "advika.png" },
     ],
   },
   {

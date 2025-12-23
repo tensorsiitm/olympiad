@@ -5,26 +5,26 @@ import Landing from "./Landing";
 import What from "./What";
 import FAQ from "./FAQ";
 import Model from "./Model";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useState } from "react";
+// import { useNavigate } from "react-router-dom";
 import ResultSection from "./ResultSection";
-import School from "./School";
-import { motion } from "framer-motion";
-import { RxCross1 } from "react-icons/rx";
+// import School from "./School";
+// import { motion } from "framer-motion";
+// import { RxCross1 } from "react-icons/rx";
 
 function Home() {
-  const navigate = useNavigate();
-  const [showPopup, setShowPopup] = useState(true);
+  // const navigate = useNavigate();
+  // const [showPopup, setShowPopup] = useState(true);
 
-  const closePopup = () => {
-    setShowPopup(false);
-  };
+  // const closePopup = () => {
+  //   setShowPopup(false);
+  // };
 
   
-  const navigateToSection = (sectionId) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
-    closePopup();  
-  };
+  // const navigateToSection = (sectionId) => {
+  //   document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+  //   closePopup();  
+  // };
 
   return (
     <>
@@ -74,7 +74,7 @@ function Home() {
       <Why />
       <What />
       {/* <School  /> */}
-      {/* <ResultSection i /> */}
+      <ResultSection i />
       <FAQ />
       <Footer />
     </>

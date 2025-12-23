@@ -15,10 +15,6 @@ const FAQ = () => {
       answer: 'The Olympiad is organized by Tensors, a non-profit organization founded by students of IIT Madras. Tensors also conducts various social initiatives and campaigns, funded by exams and counselling programs for JEE, KEAM, and JoSAA.',
     },
     {
-      question: 'What is the registration fee?',
-      answer: 'For Students in India: TBD For Students Outside India: TBD Special Provision: TBD',
-    },
-    {
       question: 'How can students register for the Olympiad?',
       // answer: 'Online Mode: Direct registration by students using the provided link. Parents/students can register and pay online directly. Schools can view registered students data anytime on the portal.\nTraditional Mode: Schools collect fees from students, fill in the details in the attached Excel sheet, and email it to us. Schools can share the attached circular for this mode.',
       answer: 'Students can register for the Olympiad in two ways:\n1. *Online Mode:* Students can register individually through the website.\n2. *Through Schools:* Students can register through their respective schools. To facilitate the Olympiad exam at your school, please reach out to us through the school outreach section on our website.'

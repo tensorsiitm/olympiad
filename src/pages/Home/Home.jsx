@@ -29,7 +29,7 @@ function Home() {
   return (
     <>
      
-      {showPopup && (
+      {/* {showPopup && (
         <motion.div
           className="fixed z-99 bottom-6 right-6 md:bottom-10 md:right-10 w-[90vw] md:w-[320px] bg-[#007f6c] text-white p-4 rounded-lg shadow-lg flex flex-col gap-3"
           initial={{ x: 100, opacity: 0 }}
@@ -65,7 +65,7 @@ function Home() {
             🔍 View Individual Results
           </button>
         </motion.div>
-      )}
+      )} */}
 
     
       <Navbar />
@@ -73,8 +73,8 @@ function Home() {
       <Model />
       <Why />
       <What />
-      <School  />
-      <ResultSection i />
+      {/* <School  /> */}
+      {/* <ResultSection i /> */}
       <FAQ />
       <Footer />
     </>

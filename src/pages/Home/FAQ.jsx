@@ -29,11 +29,11 @@ const FAQ = () => {
     },
     {
       question: 'When is the Olympiad being conducted?',
-      answer: 'The Olympiad will be conducted on January 18, 2025. The test paper will be in English.',
+      answer: 'The Olympiad will be conducted on January 17, 2026. The test paper will be in English.',
     },
     {
       question: 'What is the registration fee?',
-      answer: '- *Offline Mode:* Rs. 99/- (Offline registrations are facilitated through schools, and the exam will be conducted at the school in pen-and-paper mode).\n- *Online Mode:* Rs. 799/-',
+      answer: '- *Offline Mode:* Rs. 99/- (Offline registrations are facilitated through schools, and the exam will be conducted at the school in pen-and-paper mode).\n- *Online Mode:* Rs. 399/-',
     },
   ];
 

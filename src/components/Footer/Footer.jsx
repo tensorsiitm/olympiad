@@ -11,8 +11,8 @@ function Footer() {
    <footer class="footer">
         <div class="contact-us"><p>Contact-us</p></div>
         <div id='contact' class="contact">
-            <div className='icontextone'><div><HiPhone className='icons'/></div> <div><p> Devanarayanan: +91 82819 13830</p></div></div>
-            <div className='icontext'><div><HiPhone className='icons'/></div> <div><p>Aadil A: +91 8330020642</p></div> </div>
+            <div className='icontextone'><div><HiPhone className='icons'/></div> <div><p> Kishore: +91 7892127801</p></div></div>
+            <div className='icontext'><div><HiPhone className='icons'/></div> <div><p>Gokul: +91 8281656805</p></div> </div>
             <div className='icontextthree'><div><IoIosMail className='icons'/></div> <div> <p>tensorsofficial@gmail.com </p></div></div>
         </div>
         <div class="logo-container">

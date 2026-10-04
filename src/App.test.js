@@ -26,3 +26,13 @@ test('does not advertise individual or free registration', () => {
   expect(screen.queryByText(/individual/i)).not.toBeInTheDocument();
   expect(screen.queryByText(/government school/i)).not.toBeInTheDocument();
 });
+
+test('register buttons open the Google Form', () => {
+  render(<App />);
+  const links = screen.getAllByRole('link', { name: /^Register/ });
+  expect(links.length).toBeGreaterThan(0);
+  links.forEach((a) => {
+    expect(a).toHaveAttribute('href', expect.stringContaining('docs.google.com/forms/'));
+    expect(a).toHaveAttribute('target', '_blank');
+  });
+});

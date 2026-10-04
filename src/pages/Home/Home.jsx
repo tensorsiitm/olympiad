@@ -1,81 +1,97 @@
+import { useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Lenis from "lenis";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
-import Why from "./Why";
-import Landing from "./Landing";
-import What from "./What";
+import { hasLenis, scrollToId, setLenis } from "../../lib/scroll";
+import Hero from "./Hero";
+import Format from "./Format";
+import Prizes from "./Prizes";
+import Schools from "./Schools";
+import Syllabus from "./Syllabus";
 import FAQ from "./FAQ";
-import Model from "./Model";
-// import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
-import ResultSection from "./ResultSection";
-// import School from "./School";
-// import { motion } from "framer-motion";
-// import { RxCross1 } from "react-icons/rx";
+import Register from "./Register";
+import About from "./About";
+import Contact from "./Contact";
+
+gsap.registerPlugin(ScrollTrigger);
+
+/* Smooth scroll + reveal animations. Content is fully visible without this,
+   and nothing runs when the visitor prefers reduced motion. */
+function useMotion() {
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const lenis = new Lenis({ lerp: 0.1 });
+    setLenis(lenis);
+    lenis.on("scroll", ScrollTrigger.update);
+    const tick = (t) => lenis.raf(t * 1000);
+    gsap.ticker.add(tick);
+    gsap.ticker.lagSmoothing(0);
+
+    // In-page links go through Lenis
+    const onClick = (e) => {
+      if (e.defaultPrevented || !hasLenis()) return;
+      const a = e.target.closest('a[href^="#"]');
+      if (!a) return;
+      const id = a.getAttribute("href").slice(1);
+      if (!id || !document.getElementById(id)) return;
+      e.preventDefault();
+      scrollToId(id);
+    };
+    document.addEventListener("click", onClick);
+
+    const ctx = gsap.context(() => {
+      // Hero items play in sequence on load
+      gsap.from(".hero .reveal", {
+        opacity: 0, y: 28, duration: 0.9, ease: "power3.out", stagger: 0.1, clearProps: "all",
+      });
+
+      // Everything else reveals as it scrolls in, in small batches so grids ripple
+      const rest = gsap.utils.toArray(".reveal").filter((el) => !el.closest(".hero"));
+      gsap.set(rest, { opacity: 0, y: 32 });
+      ScrollTrigger.batch(rest, {
+        start: "top 90%",
+        once: true,
+        onEnter: (batch) =>
+          gsap.to(batch, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out", stagger: 0.09, clearProps: "opacity,transform" }),
+      });
+    });
+
+    // If fonts/images shift layout, keep trigger positions honest
+    const refresh = () => ScrollTrigger.refresh();
+    window.addEventListener("load", refresh);
+
+    return () => {
+      window.removeEventListener("load", refresh);
+      document.removeEventListener("click", onClick);
+      ctx.revert();
+      gsap.ticker.remove(tick);
+      lenis.destroy();
+      setLenis(null);
+    };
+  }, []);
+}
 
 function Home() {
-  // const navigate = useNavigate();
-  // const [showPopup, setShowPopup] = useState(true);
-
-  // const closePopup = () => {
-  //   setShowPopup(false);
-  // };
-
-  
-  // const navigateToSection = (sectionId) => {
-  //   document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
-  //   closePopup();  
-  // };
+  useMotion();
 
   return (
     <>
-     
-      {/* {showPopup && (
-        <motion.div
-          className="fixed z-99 bottom-6 right-6 md:bottom-10 md:right-10 w-[90vw] md:w-[320px] bg-[#007f6c] text-white p-4 rounded-lg shadow-lg flex flex-col gap-3"
-          initial={{ x: 100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          exit={{ x: 100, opacity: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          
-          <div className="flex justify-between items-center">
-            <p className="text-lg font-bold">Results Announced!</p>
-            <RxCross1 onClick={closePopup} className="text-2xl text-[#fff] font-bold" />
-          </div>
-
-        
-          <button
-            onClick={() => navigateToSection("results")}
-            className="bg-white text-[#007f6c] font-semibold py-2 rounded-md hover:bg-gray-200 transition"
-          >
-            📜 View Overall Results
-          </button>
-
-          <button
-            onClick={() => navigateToSection("school")}
-            className="bg-white text-[#007f6c] font-semibold py-2 rounded-md hover:bg-gray-200 transition"
-          >
-            🏆 Best School 2025
-          </button>
-
-          <button
-            onClick={() => navigate("/results")}
-            className="bg-white text-[#007f6c] font-semibold py-2 rounded-md hover:bg-gray-200 transition"
-          >
-            🔍 View Individual Results
-          </button>
-        </motion.div>
-      )} */}
-
-    
+      <a className="skip-link" href="#main">Skip to content</a>
       <Navbar />
-      <Landing />
-      <Model />
-      <Why />
-      <What />
-      {/* <School  /> */}
-      <ResultSection i />
-      <FAQ />
+      <main id="main">
+        <Hero />
+        <Format />
+        <Prizes />
+        <Schools />
+        <Syllabus />
+        <FAQ />
+        <Register />
+        <About />
+        <Contact />
+      </main>
       <Footer />
     </>
   );

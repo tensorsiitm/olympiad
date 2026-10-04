@@ -1,42 +1,29 @@
-import './Footer.css'
-import { HiPhone } from "react-icons/hi2";
-import { IoIosMail } from "react-icons/io";
-import { BsFacebook } from "react-icons/bs";
-import { FaInstagramSquare } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa6";
-import { IoLogoLinkedin } from "react-icons/io5";
+import { asset } from '../../config';
+
+const socials = [
+    { label: 'tensors.in', href: 'https://tensors.in' },
+    { label: 'Instagram', href: 'https://www.instagram.com/tensors_official/' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/company/tensors/' },
+    { label: 'YouTube', href: 'https://www.youtube.com/@tensorsofficial' },
+];
 
 function Footer() {
-    return <>
-   <footer class="footer">
-        <div class="contact-us"><p>Contact-us</p></div>
-        <div id='contact' class="contact">
-            <div className='icontextone'><div><HiPhone className='icons'/></div> <div><p> Kishore: +91 7892127801</p></div></div>
-            <div className='icontext'><div><HiPhone className='icons'/></div> <div><p>Gokul: +91 8281656805</p></div> </div>
-            <div className='icontextthree'><div><IoIosMail className='icons'/></div> <div> <p>tensorsofficial@gmail.com </p></div></div>
-        </div>
-        <div class="logo-container">
-        <div class="line"></div>
-    <div class="logo">
-        <img src='logo.png' class='logoimg' alt='Logo'/>
-    </div>
-    <div class="line"></div>
-    </div>
-
-    
-        <div class="social-icons">
-            <a href="https://www.facebook.com/tensorsofficial/"><BsFacebook className='icon'/></a>
-            <a href="https://www.instagram.com/tensors_official/reels/"><FaInstagramSquare className='icon'/></a>
-            <a href="https://in.linkedin.com/company/tensors"><IoLogoLinkedin className='icon'/></a>
-            <a href="https://www.youtube.com/channel/UCYQ-dJn04bDDjs1t6eUzq7A"><FaYoutube className='icon'/></a>
-        </div>
-        
-        <div class="copyright">
-          <p> © 2024 All right reserved - Tensors WebOps</p> 
-        </div>
-    </footer>
-
-    </>;
+    return (
+        <footer className="site-footer">
+            <div className="container footer-inner">
+                <div className="footer-brand">
+                    <img src={asset('logos/tensors-mark.png')} alt="" width="32" height="32" />
+                    <p>&copy; 2026 Tensors, IIT Madras &middot; <a href="https://tensors.in" target="_blank" rel="noopener noreferrer">tensors.in</a></p>
+                </div>
+                <ul className="socials" aria-label="Tensors online">
+                    {socials.map((s) => (
+                        <li key={s.label}><a href={s.href} target="_blank" rel="noopener noreferrer">{s.label}</a></li>
+                    ))}
+                </ul>
+                <p className="disclaimer">Tensors is a student-run team at IIT Madras; this is not an Institute examination.</p>
+            </div>
+        </footer>
+    );
 }
 
 export default Footer;

@@ -1,66 +1,71 @@
-import React, { useState } from 'react';
-import './FAQ.css'; 
-import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
+const faqs = [
+    {
+        q: 'Who can write the Olympiad?',
+        a: 'Students of Classes 8, 9 and 10, from any board and any medium. There is a separate paper and a separate rank list for each class.',
+    },
+    {
+        q: 'When and where is the exam?',
+        a: 'On 31 October 2026, offline, at the student’s own school. The school provides the hall and invigilators from its own staff. Every registered school is also informed directly, well in advance.',
+    },
+    {
+        q: 'What is the pattern and syllabus?',
+        a: '90 questions in three hours, in two sections. Section A has 50 single-correct questions, 10 each from Physics, Chemistry, Mathematics, Biology and Mental Aptitude. Section B has 40 questions in mixed formats, 10 each from Physics, Chemistry, Mathematics and Biology. It is based on the school syllabus of the student’s own class.',
+    },
+    {
+        q: 'Are sample papers available?',
+        a: 'Sample papers for each class are coming soon and will be posted on this website.',
+    },
+    {
+        q: 'How can students register?',
+        a: 'Students register through their school, for Rs 49 per student. The last date to register is 15 October 2026.',
+    },
+    {
+        q: 'Is there any payment later for results, certificates or the campus trip?',
+        a: 'No. The registration fee is the only payment. Certificates, results, the career guidance sessions and the campus trip cost the student nothing. The fee is not refundable unless there is a serious issue.',
+    },
+    {
+        q: 'When are results declared, and what does a student receive?',
+        a: 'Results are declared shortly after the exam. Every participant gets a certificate. Toppers win cash prizes from a Rs 1,00,000 pool, the top 30 in each class get free career guidance from IIT Madras students, and the topper of each class gets a trip to IIT Madras.',
+    },
+    {
+        q: 'What does the Shaastra trip cover?',
+        a: 'Shaastra is the annual tech fest of IIT Madras. The topper of each class gets a fully funded trip to see the campus, the work happening at IIT Madras, and the fest itself.',
+    },
+    {
+        q: 'Is this an official IIT Madras exam?',
+        a: 'No. Tensors is a student-run team at IIT Madras. The paper is set by IIT Madras students and the toppers visit campus, but this is not an Institute examination.',
+    },
+    {
+        q: 'What is Tensors?',
+        a: (
+            <>
+                A student-run organisation founded at IIT Madras, working across outreach and partnerships, technology, and exams and mentorship. It began as an NGO, and funds raised through exams and counselling programmes go back into its social initiatives. See <a href="https://tensors.in" target="_blank" rel="noopener noreferrer">tensors.in</a>.
+            </>
+        ),
+    },
+];
 
-const FAQ = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
+function FAQ() {
+    return (
+        <section className="section section-alt" id="faq" aria-labelledby="faq-title">
+            <div className="container faq-layout">
+                <header className="section-head reveal">
+                    <p className="eyebrow">[ FAQ ]</p>
+                    <h2 id="faq-title" className="section-title">Frequently asked questions</h2>
+                    <p className="section-lede">Can&rsquo;t find your answer? <a href="#contact">Talk to the team</a>.</p>
+                </header>
 
-  const faqs = [
-    {
-      question: 'What is the Tensors Junior Olympiad?',
-      answer: 'The Tensors Junior Olympiad in Science and Technology is an annual competition aimed at inspiring young minds and enhancing their academic skills by providing a platform to compete at a national level. It tests students conceptual understanding, analytical skills, and problem-solving abilities in various subjects.',
-    },
-    {
-      question: 'Who organizes the Tensors Junior Olympiad?',
-      answer: 'The Olympiad is organized by Tensors, a non-profit organization founded by students of IIT Madras. Tensors also conducts various social initiatives and campaigns, funded by exams and counselling programs for JEE, KEAM, and JoSAA.',
-    },
-    {
-      question: 'How can students register for the Olympiad?',
-      // answer: 'Online Mode: Direct registration by students using the provided link. Parents/students can register and pay online directly. Schools can view registered students data anytime on the portal.\nTraditional Mode: Schools collect fees from students, fill in the details in the attached Excel sheet, and email it to us. Schools can share the attached circular for this mode.',
-      answer: 'Students can register for the Olympiad in two ways:\n1. *Online Mode:* Students can register individually through the website.\n2. *Through Schools:* Students can register through their respective schools. To facilitate the Olympiad exam at your school, please reach out to us through the school outreach section on our website.'
-    },
-    {
-       question: 'How can students prepare for the Olympiad?',
-       answer: 'Students can prepare for the Olympiad by utilizing the syllabus and mock test papers provided on the website. Additionally, they can make use of online and YouTube resources. Most topics in the listed syllabus will be similar to board syllabus topics.'
-    },
-    {
-      question: 'When is the Olympiad being conducted?',
-      answer: 'The Olympiad will be conducted on January 17, 2026. The test paper will be in English.',
-    },
-    {
-      question: 'What is the registration fee?',
-      answer: '- *Offline Mode:* Rs. 99/- (Offline registrations are facilitated through schools, and the exam will be conducted at the school in pen-and-paper mode).\n- *Online Mode:* Rs. 399/-',
-    },
-  ];
-
-  const toggleFAQ = index => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-
-  return (
-    <div className="faq-container">
-      <div className="faq-head">
-        <h1>FAQs</h1>
-      </div>
-      <div className="faq-box">
-        <div className="faq-image">
-          <img src="FAQ.png" alt="FAQ" />
-        </div>
-        <div id='faq-content' className="faq-content">
-          {faqs.map((faq, index) => (
-            <div key={index} className={`faq-item ${activeIndex === index ? 'active' : ''}`}>
-              <div className="faq-question" onClick={() => toggleFAQ(index)}>
-                {faq.question} <span className="arrow">{activeIndex === index ? <IoIosArrowUp /> : <IoIosArrowDown />}</span>
-              </div>
-              {faq.answer.split('\n').map(line => {
-                return <div className="faq-answer">{line}</div>
-              })}
+                <div className="faq-list">
+                    {faqs.map((f) => (
+                        <details className="faq-item reveal" key={f.q}>
+                            <summary>{f.q}</summary>
+                            <p>{f.a}</p>
+                        </details>
+                    ))}
+                </div>
             </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
+        </section>
+    );
+}
 
 export default FAQ;

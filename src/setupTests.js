@@ -3,3 +3,11 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
+
+// jsdom has no matchMedia. Report reduced motion so the animation layer stays off in tests.
+window.matchMedia = window.matchMedia || ((query) => ({
+  matches: query.includes('reduce'),
+  media: query,
+  addEventListener: () => {},
+  removeEventListener: () => {},
+}));
